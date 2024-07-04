@@ -22,5 +22,25 @@ function showSlides() {
 }
 showSlides(); 
 
+// Function form
+function validateForm() {
+    var name = document.getElementById("name").value;
+    if (name == "") {
+        document.getElementById("nameError").textContent = "Nama harus diisi";
+        return false;
+    }
 
+    var birthdate = document.getElementById("birthdate").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    var message = document.getElementById("message").value;
 
+    document.getElementById("resultName").textContent = "Nama       : " + name;
+    document.getElementById("resultBirthdate").textContent = "Tanggal Lahir: " + birthdate;
+    if (gender) {
+        document.getElementById("resultGender").textContent = "Jenis Kelamin: " + gender.value;
+    }
+    document.getElementById("resultMessage").textContent = "Pesan      : " + message;
+
+    document.getElementById("nameError").textContent = "";
+    return false;
+}

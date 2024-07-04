@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <!-- Ini Header Content -->
     <header class="header-wrapper">
         <div class="logo">
             <img src="src/logo2.jfif" alt="">
@@ -24,14 +25,14 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#our-profile">Our Profile</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#">Message Us</a></li>
+                    <li><a href="#form">Message Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
+    <!-- Ini Home Content -->
     <main>
-        <!-- Ini Home Content -->
         <section>
         <div class="container">
             <article class="home-text">
@@ -51,7 +52,7 @@
         </div>
 
         
-    <!-- Ini Our Profile content -->
+        <!-- Ini Our Profile content -->
         </section ">
         <div class="profile-container" id="our-profile">
             <div class="profile-content">
@@ -80,7 +81,7 @@
         </div>
         <section>
 
-    <!-- Ini Portofolio content -->
+        <!-- Ini Portofolio content -->
         </section>
         <div class="porfolio-container" id="portfolio">
             <h1>Portfolio</h1>
@@ -88,55 +89,64 @@
                 <div class="portfolio-item">
                     <img src="src/logo.jfif" alt="">
                     <h3>Stardew Valley</h3>
-                    <p>Description of project 1 goes here.</p>
+                    <p>Project pembuatan character icon di game Stardew Valley</p>
                 </div>
                 <div class="portfolio-item">
                     <img src="src/logo3.jfif" alt="">
                     <h3>Twitch</h3>
-                    <p>Description of project 2 goes here.</p>
+                    <p>Membantu membuat banner pixel untuk event Twicth</p>
                 </div>
             </div>
         </div>
         <section>
-
+        
+        <!-- ini section form validation -->
         </section>
-            <div class="form-container">
+            <div class="form-container" id="form">
                 <h1>Message Us</h1>
-            
                 <div class="form-wrapper">
                     <form id="myForm" onsubmit="return validateForm()">
-                        <label for="name">Nama:</label><br>
+                        <label for="name">Nama:</label>
                         <input type="text" id="name" name="name">
-                        <span id="nameError" class="error"></span><br><br>
+                        <span id="nameError" class="error"></span>
                     
-                        <label for="birthdate">Tanggal Lahir:</label><br>
+                        <label for="birthdate">Tanggal Lahir:</label>
                         <input type="date" id="birthdate" name="birthdate">
-                        <span id="birthdateError" class="error"></span><br><br>
+                        <span id="birthdateError" class="error"></span>
                     
                         
-                        <legend>Jenis Kelamin:</legend>
-                        <input type="radio" id="genderMale" name="gender" value="laki-laki">
-                        <label for="genderMale">Laki-laki</label><br>
-                        <input type="radio" id="genderFemale" name="gender" value="perempuan">
-                        <label for="genderFemale">Perempuan</label><br>
-                        <span id="genderError" class="error"></span><br><br>
+                        <label>Jenis Kelamin:</label>
+                        <div class="radio">
+                            <input type="radio" id="genderMale" name="gender" value="laki-laki">
+                            <label for="genderMale">Laki-laki</label>
+                            <input type="radio" id="genderFemale" name="gender" value="perempuan">
+                            <label for="genderFemale">Perempuan</label>
+                            <span id="genderError" class="error"></span>
+                        </div>
                         
                     
-                        <label for="message">Pesan:</label><br>
+                        <label for="message">Pesan:</label>
                         <textarea id="message" name="message"></textarea>
-                        <span id="messageError" class="error"></span><br><br>
+                        <span id="messageError" class="error"></span>
                     
                         <input type="submit" value="Submit">
                     </form>
+
+                    <div class="form-result">
+                        <p id="resultName"></p>
+                        <p id="resultBirthdate"></p>
+                        <p id="resultGender"></p>
+                        <p id="resultMessage"></p>
+                    </div>
                 </div>
-            </div>
+            </div>  
         <section>
-
-
     </main>
 
     <footer>
-
+        <div class="footer-container">
+            <p>Create by Naufal Faza Rasyadan with Jari Jemari</p>
+        </div>
     </footer>
 
     <script src="Js/script.js"></script>
